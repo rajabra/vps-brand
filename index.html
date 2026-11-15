@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>VPS Brand Board</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* Layout: a printed brand-board feel. Dark navy masthead, then wide tiles on a lavender-tinted ground, each tile one brand element. Logo tiles keep fixed backgrounds because logo rules depend on them. */
+:root{
+  --navy:#1E2238; --purple:#7954FF; --blue:#5FACFF; --lav:#CCCFF4; --copper:#EAA072;
+  --bg:#F3F3FA; --panel:#FFFFFF; --ink:#1E2238; --muted:#5B6078; --line:#DEDFEE; --chip:#ECEBF8;
+  --font:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --font-ar:Cairo,Inter,-apple-system,"Segoe UI",Tahoma,Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0B0D1A;--panel:#151830;--ink:#F1F1FA;--muted:#A3A7C2;--line:#272B4A;--chip:#20244A;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0B0D1A;--panel:#151830;--ink:#F1F1FA;--muted:#A3A7C2;--line:#272B4A;--chip:#20244A;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 var(--font);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1180px;margin:0 auto;padding-block:20px 56px;display:flex;flex-direction:column;gap:20px}
+h1,h2,h3,p{margin:0;text-wrap:balance}
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.mast{background:var(--navy);color:#fff;border-radius:6px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:24px;align-items:center;padding:40px;overflow:hidden;position:relative}
+.mast::after{content:"";position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2296%22 height=%2296%22 viewBox=%220 0 96 96%22%3E%3Cg opacity=%221%22%3E%3Csvg x=%226%22 y=%2210%22 width=%2236%22 height=%2236%22 viewBox=%220 0 162 160%22%3E%3Cdefs%3E%3ClinearGradient id=%22pa%22 x1=%22133.904%22 y1=%22131.135%22 x2=%2284.0192%22 y2=%22131.135%22 gradientUnits=%22userSpaceOnUse%22%3E%3Cstop stop-color=%22%235FACFF%22/%3E%3Cstop offset=%221%22 stop-color=%22%237954FF%22/%3E%3C/linearGradient%3E%3ClinearGradient id=%22pb%22 x1=%2299.3784%22 y1=%2230.4799%22 x2=%2261.9732%22 y2=%2230.4799%22 gradientUnits=%22userSpaceOnUse%22%3E%3Cstop stop-color=%22%235FACFF%22/%3E%3Cstop offset=%221%22 stop-color=%22%237954FF%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d=%22M111.129 94.628L111.14 94.6728L80.9047 116.686L80.8375 116.641L72.3123 122.948L30.8742 153.553L50.5346 94.628L0 58.5222L49.4032 58.9143L62.1068 59.0151L62.1404 58.9143H99.5233L99.5569 59.0151L161.664 58.5222L111.129 94.628Z%22 fill=%22%231E2238%22/%3E%3Cpath d=%22M133.903 159.703L84.0186 122.836L114.254 100.823L133.903 159.703Z%22 fill=%22url%28%23pa%29%22/%3E%3Cpath d=%22M80.8601 0L99.3779 59.2054L61.9727 59.127L80.8601 0Z%22 fill=%22url%28%23pb%29%22/%3E%3C/svg%3E%3C/g%3E%3Cg opacity=%221%22%3E%3Csvg x=%2254%22 y=%2258%22 width=%2236%22 height=%2236%22 viewBox=%220 0 162 160%22%3E%3Cdefs%3E%3ClinearGradient id=%22pa%22 x1=%22133.904%22 y1=%22131.135%22 x2=%2284.0192%22 y2=%22131.135%22 gradientUnits=%22userSpaceOnUse%22%3E%3Cstop stop-color=%22%235FACFF%22/%3E%3Cstop offset=%221%22 stop-color=%22%237954FF%22/%3E%3C/linearGradient%3E%3ClinearGradient id=%22pb%22 x1=%2299.3784%22 y1=%2230.4799%22 x2=%2261.9732%22 y2=%2230.4799%22 gradientUnits=%22userSpaceOnUse%22%3E%3Cstop stop-color=%22%235FACFF%22/%3E%3Cstop offset=%221%22 stop-color=%22%237954FF%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d=%22M111.129 94.628L111.14 94.6728L80.9047 116.686L80.8375 116.641L72.3123 122.948L30.8742 153.553L50.5346 94.628L0 58.5222L49.4032 58.9143L62.1068 59.0151L62.1404 58.9143H99.5233L99.5569 59.0151L161.664 58.5222L111.129 94.628Z%22 fill=%22%231E2238%22/%3E%3Cpath d=%22M133.903 159.703L84.0186 122.836L114.254 100.823L133.903 159.703Z%22 fill=%22url%28%23pa%29%22/%3E%3Cpath d=%22M80.8601 0L99.3779 59.2054L61.9727 59.127L80.8601 0Z%22 fill=%22url%28%23pb%29%22/%3E%3C/svg%3E%3C/g%3E%3C/svg%3E");background-size:96px 96px;opacity:.07;pointer-events:none}
+.mast>*{position:relative;z-index:1}
+.mast img{width:min(100%,340px);display:block}
+.mast .line{display:flex;flex-direction:column;gap:2px;font-size:clamp(28px,4.2vw,46px);font-weight:700;letter-spacing:-.02em;line-height:1.1;margin-top:20px}
+.mast .line span:last-child{background:linear-gradient(90deg,var(--blue),var(--purple));-webkit-background-clip:text;background-clip:text;color:transparent}
+.mast .meta{display:flex;flex-direction:column;gap:14px;color:var(--lav);font-size:14px;max-width:44ch}
+.mast .eyebrow{color:var(--lav);opacity:.75}
+.sec{display:flex;flex-direction:column;gap:14px}
+.sec>header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:6px 24px;padding-top:18px;border-top:2px solid var(--ink)}
+.sec h2{font-size:22px;letter-spacing:-.01em}
+.sec header p{color:var(--muted);font-size:13px;max-width:60ch}
+.grid{display:grid;gap:14px}
+.c1{grid-template-columns:1fr}
+.c2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.c3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.c4{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:1000px){.c4{grid-template-columns:repeat(2,minmax(0,1fr))}.c3{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){
+ .grid{gap:8px}.wrap{gap:14px}
+ .tile .stage{padding:12px;min-height:90px}.tile .cap{padding:9px 10px 11px}.tile .cap b{font-size:12px}.tile .cap span,.tile .cap a{font-size:11px}
+ .c2 .stage[style*="240px"]{min-height:130px!important}
+ .cs{padding:20px}.cs img{width:100%;max-width:120px}.cs i{font-size:9px}
+ .sizes{gap:14px;padding:14px;min-height:90px}.sizes img[width="120"]{width:80px}.sizes figcaption{font-size:10px}
+ .misuse .stage{min-height:80px;padding:10px}.misuse .x::after{width:16px;height:16px;top:5px;right:5px}
+ .sw .chip{height:64px;padding:8px;font-size:12px}.sw .chip small{display:none}
+ .sw dl{padding:8px;font-size:11px;gap:2px 6px}.copy{margin:0 8px 8px;font-size:10px;padding:4px 6px}
+ .pair{padding:10px;gap:6px}.pair span{padding:6px 8px;font-size:11px;flex-wrap:wrap;gap:4px}
+ .bar{height:56px}.pat{height:110px}
+ .type{padding:12px;gap:8px}.type .big{font-size:36px}.type .ar{font-size:20px}.type p[style*="26px"]{font-size:16px!important}.type .abc{font-size:10px}
+ .scale{padding:4px 12px 12px;gap:6px}.scale div{flex-direction:column;gap:2px}.scale span{font-size:13px!important}.scale small{font-size:10px;white-space:normal}
+ .mast{padding:22px 16px}
+}
+.tile{background:var(--panel);border:1px solid var(--line);border-radius:6px;display:flex;flex-direction:column;min-width:0}
+.tile .stage{display:grid;place-items:center;padding:28px;min-height:170px;border-radius:5px 5px 0 0}
+.tile .stage img{display:block;max-width:100%;height:auto}
+.tile .cap{padding:14px 16px 16px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.tile .cap b{font-size:14px}
+.tile .cap span{color:var(--muted);font-size:12.5px}
+.tile .cap a{font-size:12.5px;color:var(--purple);font-weight:600;text-decoration:none;margin-top:4px;width:fit-content}
+.tile .cap a:hover,.tile .cap a:focus-visible{text-decoration:underline}
+.onwhite{background:#fff;border-bottom:1px solid #E7E7F2}
+.onnavy{background:var(--navy)}
+.cs{position:relative;display:inline-block;padding:34px;outline:1.5px dashed var(--purple);outline-offset:0;background:
+  linear-gradient(#ECEBF8,#ECEBF8) padding-box}
+.cs img{display:block;width:200px;outline:1px solid rgba(121,84,255,.45)}
+.cs i{position:absolute;font:600 11px var(--font);color:var(--purple);font-style:normal}
+.cs i.t{top:10px;left:50%;transform:translateX(-50%)}.cs i.l{left:10px;top:50%;transform:translateY(-50%)}
+.cs i.r{right:10px;top:50%;transform:translateY(-50%)}.cs i.b{bottom:10px;left:50%;transform:translateX(-50%)}
+.rules{display:flex;flex-direction:column;gap:10px;padding:18px 20px;font-size:14px}
+.rules li{margin-left:18px}
+.rules ul{margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.sizes{display:flex;align-items:flex-end;gap:28px;flex-wrap:wrap;padding:28px;min-height:170px;background:#fff;border-radius:5px 5px 0 0;border-bottom:1px solid #E7E7F2}
+.sizes figure{margin:0;display:flex;flex-direction:column;gap:8px;align-items:flex-start}
+.sizes figcaption{font-size:12px;color:#5B6078}
+.misuse .stage{min-height:130px;padding:20px}
+.misuse .x{position:relative}
+.misuse .x::after{content:"";position:absolute;top:8px;right:8px;width:24px;height:24px;border-radius:50%;background:#D93A3A url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M8 8l8 8M16 8l-8 8' stroke='%23fff' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E")}
+.sw{border-radius:6px;overflow:hidden;border:1px solid var(--line);background:var(--panel);display:flex;flex-direction:column;min-width:0}
+.sw .chip{height:132px;padding:14px;display:flex;align-items:flex-end;justify-content:space-between;font-weight:700;font-size:15px}
+.sw .chip small{font-weight:500;font-size:11px;opacity:.85;letter-spacing:.06em;text-transform:uppercase}
+.sw dl{margin:0;padding:12px 14px 14px;display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:13px}
+.sw dt{color:var(--muted)}.sw dd{margin:0;font-variant-numeric:tabular-nums;font-weight:500}
+.copy{font:600 12px var(--font);border:1px solid var(--line);background:var(--chip);color:var(--ink);border-radius:4px;padding:5px 9px;cursor:pointer;margin:0 14px 14px;width:fit-content}
+.copy:hover{border-color:var(--purple)}.copy:focus-visible{outline:2px solid var(--purple);outline-offset:2px}
+.pair{display:flex;flex-wrap:wrap;gap:10px;padding:16px}
+.pair span{padding:8px 14px;border-radius:4px;font-weight:600;font-size:13px;display:flex;gap:10px;align-items:baseline}
+.pair em{font-style:normal;font-weight:500;font-size:11px;opacity:.85}
+.bar{height:96px;border-radius:5px 5px 0 0}
+.pat{height:200px;border-radius:5px 5px 0 0;background-color:#EEEDFB;background-image:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2296%22 height=%2296%22 viewBox=%220 0 96 96%22%3E%3Cg opacity=%221%22%3E%3Csvg x=%226%22 y=%2210%22 width=%2236%22 height=%2236%22 viewBox=%220 0 162 160%22%3E%3Cdefs%3E%3ClinearGradient id=%22pa%22 x1=%22133.904%22 y1=%22131.135%22 x2=%2284.0192%22 y2=%22131.135%22 gradientUnits=%22userSpaceOnUse%22%3E%3Cstop stop-color=%22%235FACFF%22/%3E%3Cstop offset=%221%22 stop-color=%22%237954FF%22/%3E%3C/linearGradient%3E%3ClinearGradient id=%22pb%22 x1=%2299.3784%22 y1=%2230.4799%22 x2=%2261.9732%22 y2=%2230.4799%22 gradientUnits=%22userSpaceOnUse%22%3E%3Cstop stop-color=%22%235FACFF%22/%3E%3Cstop offset=%221%22 stop-color=%22%237954FF%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d=%22M111.129 94.628L111.14 94.6728L80.9047 116.686L80.8375 116.641L72.3123 122.948L30.8742 153.553L50.5346 94.628L0 58.5222L49.4032 58.9143L62.1068 59.0151L62.1404 58.9143H99.5233L99.5569 59.0151L161.664 58.5222L111.129 94.628Z%22 fill=%22%231E2238%22/%3E%3Cpath d=%22M133.903 159.703L84.0186 122.836L114.254 100.823L133.903 159.703Z%22 fill=%22url%28%23pa%29%22/%3E%3Cpath d=%22M80.8601 0L99.3779 59.2054L61.9727 59.127L80.8601 0Z%22 fill=%22url%28%23pb%29%22/%3E%3C/svg%3E%3C/g%3E%3Cg opacity=%221%22%3E%3Csvg x=%2254%22 y=%2258%22 width=%2236%22 height=%2236%22 viewBox=%220 0 162 160%22%3E%3Cdefs%3E%3ClinearGradient id=%22pa%22 x1=%22133.904%22 y1=%22131.135%22 x2=%2284.0192%22 y2=%22131.135%22 gradientUnits=%22userSpaceOnUse%22%3E%3Cstop stop-color=%22%235FACFF%22/%3E%3Cstop offset=%221%22 stop-color=%22%237954FF%22/%3E%3C/linearGradient%3E%3ClinearGradient id=%22pb%22 x1=%2299.3784%22 y1=%2230.4799%22 x2=%2261.9732%22 y2=%2230.4799%22 gradientUnits=%22userSpaceOnUse%22%3E%3Cstop stop-color=%22%235FACFF%22/%3E%3Cstop offset=%221%22 stop-color=%22%237954FF%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d=%22M111.129 94.628L111.14 94.6728L80.9047 116.686L80.8375 116.641L72.3123 122.948L30.8742 153.553L50.5346 94.628L0 58.5222L49.4032 58.9143L62.1068 59.0151L62.1404 58.9143H99.5233L99.5569 59.0151L161.664 58.5222L111.129 94.628Z%22 fill=%22%231E2238%22/%3E%3Cpath d=%22M133.903 159.703L84.0186 122.836L114.254 100.823L133.903 159.703Z%22 fill=%22url%28%23pa%29%22/%3E%3Cpath d=%22M80.8601 0L99.3779 59.2054L61.9727 59.127L80.8601 0Z%22 fill=%22url%28%23pb%29%22/%3E%3C/svg%3E%3C/g%3E%3C/svg%3E");background-size:96px 96px}
+.pat.dk{background-color:var(--navy)}
+.pat.dk{background-blend-mode:normal}
+.type{padding:22px;display:flex;flex-direction:column;gap:12px}
+.type .big{font-size:64px;font-weight:800;line-height:1;letter-spacing:-.03em}
+.type .ar{font-family:var(--font-ar);font-size:44px;font-weight:700;line-height:1.3;direction:rtl}
+.type .abc{font-size:15px;color:var(--muted);word-break:break-all}
+.scale{display:flex;flex-direction:column;gap:8px;padding:6px 22px 22px}
+.scale div{display:flex;justify-content:space-between;gap:14px;align-items:baseline;border-top:1px solid var(--line);padding-top:8px}
+.scale small{color:var(--muted);font-size:11.5px;white-space:nowrap}
+.note{background:var(--chip);border-radius:6px;padding:14px 18px;font-size:13.5px;color:var(--muted)}
+.note b{color:var(--ink)}
+.toast{position:fixed;left:50%;bottom:max(20px,env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--navy);color:#fff;padding:8px 14px;border-radius:4px;font-size:13px;opacity:0;pointer-events:none;transition:opacity .2s}
+.toast.on{opacity:1}
+@media (max-width:760px){.mast{grid-template-columns:1fr;padding:28px 22px}.type .big{font-size:48px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+
+<main class="wrap">
+<p class="note" style="border-left:4px solid #EAA072"><b>Draft.</b> Logo is the old website star, a placeholder until the new files arrive.</p>
+
+<section class="mast">
+  <div>
+    <p class="eyebrow">Brand board · Version 1.0</p>
+    <img src="logos/vps-logo-reversed.svg" alt="VPS Mobility Solutions logo" style="margin-top:22px">
+    <p class="line"><span>Motion.</span><span>Park. Care. Together.</span></p>
+  </div>
+  <div class="meta">
+    <p>Logos, colours, gradients, pattern and type. Tap a code to copy it.</p>
+    <p style="opacity:.75;font-size:13px">VPS Mobility Solutions · vpssolutionsksa.com</p>
+  </div>
+</section>
+
+<section class="sec" id="logo">
+  <header><h2>Logo</h2><p>Full colour on light. Reversed on dark.</p></header>
+  <div class="grid c2">
+    <div class="tile"><div class="stage onwhite" style="min-height:240px"><img src="logos/vps-logo-primary.svg" alt="VPS logo, full colour" width="300"></div><div class="cap"><b>Primary, on light</b></div></div>
+    <div class="tile"><div class="stage onnavy" style="min-height:240px"><img src="logos/vps-logo-reversed.svg" alt="VPS logo, reversed" width="300"></div><div class="cap"><b>Primary, on dark</b></div></div>
+  </div>
+</section>
+
+<section class="sec" id="variants">
+  <header><h2>Logo files</h2><p>8 SVG versions.</p></header>
+  <div class="grid c4">
+    <div class="tile"><div class="stage onwhite"><img src="logos/vps-logo-primary.svg" alt="Primary, full colour" width="170"></div><div class="cap"><b>Primary, full colour</b><span>Light backgrounds</span><a href="logos/vps-logo-primary.svg" target="_blank" rel="noopener">Open SVG</a></div></div>
+    <div class="tile"><div class="stage onnavy"><img src="logos/vps-logo-reversed.svg" alt="Reversed" width="170"></div><div class="cap"><b>Reversed</b><span>Dark backgrounds</span><a href="logos/vps-logo-reversed.svg" target="_blank" rel="noopener">Open SVG</a></div></div>
+    <div class="tile"><div class="stage onwhite"><img src="logos/vps-logo-two-colour.svg" alt="Flat two-colour" width="170"></div><div class="cap"><b>Flat two-colour</b><span>Print, embroidery</span><a href="logos/vps-logo-two-colour.svg" target="_blank" rel="noopener">Open SVG</a></div></div>
+    <div class="tile"><div class="stage onwhite"><img src="logos/vps-logo-mono-navy.svg" alt="Monochrome navy" width="170"></div><div class="cap"><b>Monochrome navy</b><span>Stamps, forms</span><a href="logos/vps-logo-mono-navy.svg" target="_blank" rel="noopener">Open SVG</a></div></div>
+    <div class="tile"><div class="stage onnavy"><img src="logos/vps-logo-mono-white.svg" alt="Monochrome white" width="170"></div><div class="cap"><b>Monochrome white</b><span>Photos, strong colours</span><a href="logos/vps-logo-mono-white.svg" target="_blank" rel="noopener">Open SVG</a></div></div>
+    <div class="tile"><div class="stage onwhite"><img src="logos/vps-logo-icon.svg" alt="Icon, full colour" width="84"></div><div class="cap"><b>Icon, full colour</b><span>App, favicon, avatar</span><a href="logos/vps-logo-icon.svg" target="_blank" rel="noopener">Open SVG</a></div></div>
+    <div class="tile"><div class="stage onnavy"><img src="logos/vps-logo-icon-reversed.svg" alt="Icon, reversed" width="84"></div><div class="cap"><b>Icon, reversed</b><span>Icon on dark</span><a href="logos/vps-logo-icon-reversed.svg" target="_blank" rel="noopener">Open SVG</a></div></div>
+    <div class="tile"><div class="stage onwhite"><img src="logos/vps-logo-icon-mono.svg" alt="Icon, monochrome" width="84"></div><div class="cap"><b>Icon, monochrome</b><span>Engraving, one-colour merch</span><a href="logos/vps-logo-icon-mono.svg" target="_blank" rel="noopener">Open SVG</a></div></div>
+
+  </div>
+</section>
+
+<section class="sec" id="rules">
+  <header><h2>Clear space, size and misuse</h2><p>Proposed. To confirm with VPS.</p></header>
+  <div class="grid c2">
+    <div class="tile"><div class="stage onwhite"><span class="cs"><i class="t">x</i><i class="l">x</i><i class="r">x</i><i class="b">x</i><img src="logos/vps-logo-primary.svg" alt="Logo with clear space marked"></span></div>
+      <div class="cap"><b>Clear space</b><span>Keep <b>x</b> free on all sides.</span></div></div>
+    <div class="tile"><div class="sizes"><figure><img src="logos/vps-logo-primary.svg" width="120" alt="Logo at minimum width"><figcaption>Full logo<br>min. 120 px / 30 mm</figcaption></figure><figure><img src="logos/vps-logo-icon.svg" width="28" alt="Icon at minimum width"><figcaption>Icon<br>min. 28 px / 8 mm</figcaption></figure><figure><img src="logos/vps-logo-icon.svg" width="16" alt="Icon at favicon size"><figcaption>Favicon<br>16 px</figcaption></figure></div>
+      <div class="cap"><b>Minimum size</b><span>Smaller? Use the icon.</span></div></div>
+  </div>
+  <div class="grid c3 misuse">
+    <div class="tile x"><div class="stage onwhite"><img src="logos/vps-logo-primary.svg" width="150" style="transform:scaleX(1.5)" alt="Stretched logo"></div><div class="cap"><b>Don't stretch</b></div></div>
+    <div class="tile x"><div class="stage onwhite"><img src="logos/vps-logo-primary.svg" width="150" style="filter:hue-rotate(150deg) saturate(2)" alt="Recoloured logo"></div><div class="cap"><b>Don't recolour</b></div></div>
+    <div class="tile x"><div class="stage onwhite"><img src="logos/vps-logo-primary.svg" width="150" style="transform:rotate(-14deg)" alt="Rotated logo"></div><div class="cap"><b>Don't rotate</b></div></div>
+    <div class="tile x"><div class="stage" style="background:#7954FF"><img src="logos/vps-logo-primary.svg" width="150" alt="Logo on purple"></div><div class="cap"><b>Don't use on clashing colours</b></div></div>
+    <div class="tile x"><div class="stage onwhite"><img src="logos/vps-logo-primary.svg" width="150" style="filter:drop-shadow(4px 6px 3px rgba(0,0,0,.45))" alt="Logo with shadow"></div><div class="cap"><b>No shadows or glows</b></div></div>
+    <div class="tile x"><div class="stage" style="background:linear-gradient(120deg,#8a8f9c,#c9ccd6)"><img src="logos/vps-logo-primary.svg" width="150" style="opacity:.55" alt="Faded logo on grey"></div><div class="cap"><b>Don't fade</b></div></div>
+  </div>
+</section>
+
+<section class="sec" id="colour">
+  <header><h2>Colour</h2><p>Click a code to copy.</p></header>
+  <div class="grid c3">
+    <div class="sw"><div class="chip" style="background:#1E2238;color:#fff"><span>Navy</span><small>Primary</small></div><dl><dt>HEX</dt><dd>#1E2238</dd><dt>RGB</dt><dd>30 34 56</dd></dl><button class="copy" data-copy="#1E2238" type="button">Copy #1E2238</button></div>
+    <div class="sw"><div class="chip" style="background:#7954FF;color:#fff"><span>Purple</span><small>Primary accent</small></div><dl><dt>HEX</dt><dd>#7954FF</dd><dt>RGB</dt><dd>121 84 255</dd></dl><button class="copy" data-copy="#7954FF" type="button">Copy #7954FF</button></div>
+    <div class="sw"><div class="chip" style="background:#5FACFF;color:#1E2238"><span>Blue</span><small>Secondary</small></div><dl><dt>HEX</dt><dd>#5FACFF</dd><dt>RGB</dt><dd>95 172 255</dd></dl><button class="copy" data-copy="#5FACFF" type="button">Copy #5FACFF</button></div>
+    <div class="sw"><div class="chip" style="background:#CCCFF4;color:#1E2238"><span>Lavender</span><small>Tint</small></div><dl><dt>HEX</dt><dd>#CCCFF4</dd><dt>RGB</dt><dd>204 207 244</dd></dl><button class="copy" data-copy="#CCCFF4" type="button">Copy #CCCFF4</button></div>
+    <div class="sw"><div class="chip" style="background:#EAA072;color:#1E2238"><span>Copper</span><small>Warm accent</small></div><dl><dt>HEX</dt><dd>#EAA072</dd><dt>RGB</dt><dd>234 160 114</dd></dl><button class="copy" data-copy="#EAA072" type="button">Copy #EAA072</button></div>
+    <div class="sw"><div class="chip" style="background:#FFFFFF;color:#1E2238"><span>White</span><small>Background</small></div><dl><dt>HEX</dt><dd>#FFFFFF</dd><dt>RGB</dt><dd>255 255 255</dd></dl><button class="copy" data-copy="#FFFFFF" type="button">Copy #FFFFFF</button></div>
+
+  </div>
+  <p class="note"><b>Missing:</b> CMYK and Pantone for print.</p>
+</section>
+
+<section class="sec" id="gradient">
+  <header><h2>Gradient and pattern</h2><p>From the logo wing.</p></header>
+  <div class="grid c3">
+    <div class="tile"><div class="bar" style="background:linear-gradient(90deg,#5FACFF,#7954FF)"></div><div class="cap"><b>Brand</b><span>#5FACFF → #7954FF</span></div></div>
+    <div class="tile"><div class="bar" style="background:linear-gradient(90deg,#CCCFF4,#7954FF)"></div><div class="cap"><b>Soft</b><span>#CCCFF4 → #7954FF</span></div></div>
+    <div class="tile"><div class="bar" style="background:linear-gradient(90deg,#7954FF,#EAA072)"></div><div class="cap"><b>Warm</b><span>#7954FF → #EAA072</span></div></div>
+  </div>
+  <div class="grid c2">
+    <div class="tile"><div class="pat"></div><div class="cap"><b>Pattern, light</b></div></div>
+    <div class="tile"><div class="pat dk"></div><div class="cap"><b>Pattern, dark</b></div></div>
+  </div>
+</section>
+
+<section class="sec" id="type">
+  <header><h2>Typography</h2><p>Inter and Cairo. Both free on Google Fonts.</p></header>
+  <div class="grid c1">
+    <div class="tile"><div class="type"><p class="eyebrow">English · Inter</p><p class="big">Aa</p><p style="font-size:26px;font-weight:700;letter-spacing:-.01em">Valet and car park operations</p><p class="abc">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz 0123456789</p></div>
+      <div class="scale">
+        <div><span style="font-weight:800;font-size:28px">Heading</span><small>Inter ExtraBold 800</small></div>
+        <div><span style="font-weight:700;font-size:20px">Subheading</span><small>Inter Bold 700</small></div>
+        <div><span style="font-weight:600;font-size:15px">Label and button</span><small>Inter SemiBold 600</small></div>
+        <div><span style="font-weight:400;font-size:15px">Body copy reads at this size and weight.</span><small>Inter Regular 400</small></div>
+      </div></div>
+    <div class="tile"><div class="type"><p class="eyebrow">Arabic · Cairo</p><p class="big" style="font-family:var(--font-ar)">أب</p><p class="ar">ركن السيارات وخدمة الضيافة</p><p class="abc" style="font-family:var(--font-ar);direction:rtl;text-align:right">أبتثجحخدذرزسشصضطظعغفقكلمنهوي ٠١٢٣٤٥٦٧٨٩</p></div>
+      <div class="scale">
+        <div><span style="font-family:var(--font-ar);font-weight:700;font-size:26px">العنوان</span><small>Cairo Bold 700</small></div>
+        <div><span style="font-family:var(--font-ar);font-weight:600;font-size:18px">عنوان فرعي</span><small>Cairo SemiBold 600</small></div>
+        <div><span style="font-family:var(--font-ar);font-weight:400;font-size:15px">نص عادي يُقرأ بهذا الحجم والوزن.</span><small>Cairo Regular 400</small></div>
+      </div></div>
+  </div>
+  <p class="note"><b>To confirm:</b> concept board looks like Proxima Nova. Website uses Inter.</p>
+</section>
+
+<section class="sec" id="voice">
+  <header><h2>Brand line</h2></header>
+  <div class="tile"><div class="type" style="gap:6px"><p class="big" style="font-size:clamp(34px,6vw,64px);line-height:1.08">Motion<br>Park<br>Care<br><span style="background:linear-gradient(90deg,#5FACFF,#7954FF);-webkit-background-clip:text;background-clip:text;color:transparent">Together</span></p></div></div>
+</section>
+
+</main>
+<div class="toast" id="toast" role="status" aria-live="polite">Copied</div>
+<script>
+(function(){
+  var t=document.getElementById('toast'),to;
+  function show(m){t.textContent=m;t.classList.add('on');clearTimeout(to);to=setTimeout(function(){t.classList.remove('on')},1400)}
+  document.addEventListener('click',function(e){
+    var b=e.target.closest('[data-copy]');if(!b)return;
+    var v=b.getAttribute('data-copy');
+    function fallback(){var r=document.createRange();r.selectNodeContents(b);var s=getSelection();s.removeAllRanges();s.addRange(r);show('Press copy to copy '+v)}
+    try{navigator.clipboard.writeText(v).then(function(){show('Copied '+v)},fallback)}catch(x){fallback()}
+  });
+})();
+</script>
+
+</body>
+</html>
