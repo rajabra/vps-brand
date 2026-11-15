@@ -43,7 +43,11 @@ h1,h2,h3,p{margin:0;text-wrap:balance}
 @media (max-width:1000px){.c4{grid-template-columns:repeat(2,minmax(0,1fr))}.c3{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:640px){
  .grid{gap:8px}.wrap{gap:14px}
- .tile .stage{padding:12px;min-height:90px}.tile .cap{padding:9px 10px 11px}.tile .cap b{font-size:12px}.tile .cap span,.tile .cap a{font-size:11px}
+ .tile .stage{padding:12px;min-height:90px}.tile .cap{padding:9px 10px 11px}.tile .cap b{font-size:12px}.tile .cap span,.dl{display:flex;gap:8px;margin-top:6px}
+.dl a{border:1px solid var(--line);background:var(--chip);color:var(--ink)!important;border-radius:4px;padding:5px 12px;text-decoration:none!important;font-size:12px!important;font-weight:600}
+.dl a:hover,.dl a:focus-visible{border-color:var(--purple)}
+.sec header a.all{color:var(--purple);font-weight:700;text-decoration:none}
+.tile .cap a{font-size:11px}
  .c2 .stage[style*="240px"]{min-height:130px!important}
  .cs{padding:20px}.cs img{width:100%;max-width:120px}.cs i{font-size:9px}
  .sizes{gap:14px;padding:14px;min-height:90px}.sizes img[width="120"]{width:80px}.sizes figcaption{font-size:10px}
@@ -114,7 +118,6 @@ h1,h2,h3,p{margin:0;text-wrap:balance}
 
 
 <main class="wrap">
-<p class="note" style="border-left:4px solid #EAA072"><b>Draft.</b> Logo is the old website star, a placeholder until the new files arrive.</p>
 
 <section class="mast">
   <div>
@@ -137,16 +140,16 @@ h1,h2,h3,p{margin:0;text-wrap:balance}
 </section>
 
 <section class="sec" id="variants">
-  <header><h2>Logo files</h2><p>8 SVG versions.</p></header>
+  <header><h2>Logo files</h2><p>SVG and PNG. <a class="all" href="vps-logos.zip" download>Download all (ZIP)</a></p></header>
   <div class="grid c4">
-    <div class="tile"><div class="stage onwhite"><img src="logos/vps-logo-primary.svg" alt="Primary, full colour" width="170"></div><div class="cap"><b>Primary, full colour</b><span>Light backgrounds</span><a href="logos/vps-logo-primary.svg" target="_blank" rel="noopener">Open SVG</a></div></div>
-    <div class="tile"><div class="stage onnavy"><img src="logos/vps-logo-reversed.svg" alt="Reversed" width="170"></div><div class="cap"><b>Reversed</b><span>Dark backgrounds</span><a href="logos/vps-logo-reversed.svg" target="_blank" rel="noopener">Open SVG</a></div></div>
-    <div class="tile"><div class="stage onwhite"><img src="logos/vps-logo-two-colour.svg" alt="Flat two-colour" width="170"></div><div class="cap"><b>Flat two-colour</b><span>Print, embroidery</span><a href="logos/vps-logo-two-colour.svg" target="_blank" rel="noopener">Open SVG</a></div></div>
-    <div class="tile"><div class="stage onwhite"><img src="logos/vps-logo-mono-navy.svg" alt="Monochrome navy" width="170"></div><div class="cap"><b>Monochrome navy</b><span>Stamps, forms</span><a href="logos/vps-logo-mono-navy.svg" target="_blank" rel="noopener">Open SVG</a></div></div>
-    <div class="tile"><div class="stage onnavy"><img src="logos/vps-logo-mono-white.svg" alt="Monochrome white" width="170"></div><div class="cap"><b>Monochrome white</b><span>Photos, strong colours</span><a href="logos/vps-logo-mono-white.svg" target="_blank" rel="noopener">Open SVG</a></div></div>
-    <div class="tile"><div class="stage onwhite"><img src="logos/vps-logo-icon.svg" alt="Icon, full colour" width="84"></div><div class="cap"><b>Icon, full colour</b><span>App, favicon, avatar</span><a href="logos/vps-logo-icon.svg" target="_blank" rel="noopener">Open SVG</a></div></div>
-    <div class="tile"><div class="stage onnavy"><img src="logos/vps-logo-icon-reversed.svg" alt="Icon, reversed" width="84"></div><div class="cap"><b>Icon, reversed</b><span>Icon on dark</span><a href="logos/vps-logo-icon-reversed.svg" target="_blank" rel="noopener">Open SVG</a></div></div>
-    <div class="tile"><div class="stage onwhite"><img src="logos/vps-logo-icon-mono.svg" alt="Icon, monochrome" width="84"></div><div class="cap"><b>Icon, monochrome</b><span>Engraving, one-colour merch</span><a href="logos/vps-logo-icon-mono.svg" target="_blank" rel="noopener">Open SVG</a></div></div>
+    <div class="tile"><div class="stage onwhite"><img src="logos/vps-logo-primary.svg" alt="Primary, full colour" width="170"></div><div class="cap"><b>Primary, full colour</b><span>Light backgrounds</span><span class="dl"><a href="logos/vps-logo-primary.svg" download>SVG</a><a href="logos/vps-logo-primary.png" download>PNG</a></span></div></div>
+    <div class="tile"><div class="stage onnavy"><img src="logos/vps-logo-reversed.svg" alt="Reversed" width="170"></div><div class="cap"><b>Reversed</b><span>Dark backgrounds</span><span class="dl"><a href="logos/vps-logo-reversed.svg" download>SVG</a><a href="logos/vps-logo-reversed.png" download>PNG</a></span></div></div>
+    <div class="tile"><div class="stage onwhite"><img src="logos/vps-logo-two-colour.svg" alt="Flat two-colour" width="170"></div><div class="cap"><b>Flat two-colour</b><span>Print, embroidery</span><span class="dl"><a href="logos/vps-logo-two-colour.svg" download>SVG</a><a href="logos/vps-logo-two-colour.png" download>PNG</a></span></div></div>
+    <div class="tile"><div class="stage onwhite"><img src="logos/vps-logo-mono-navy.svg" alt="Monochrome navy" width="170"></div><div class="cap"><b>Monochrome navy</b><span>Stamps, forms</span><span class="dl"><a href="logos/vps-logo-mono-navy.svg" download>SVG</a><a href="logos/vps-logo-mono-navy.png" download>PNG</a></span></div></div>
+    <div class="tile"><div class="stage onnavy"><img src="logos/vps-logo-mono-white.svg" alt="Monochrome white" width="170"></div><div class="cap"><b>Monochrome white</b><span>Photos, strong colours</span><span class="dl"><a href="logos/vps-logo-mono-white.svg" download>SVG</a><a href="logos/vps-logo-mono-white.png" download>PNG</a></span></div></div>
+    <div class="tile"><div class="stage onwhite"><img src="logos/vps-logo-icon.svg" alt="Icon, full colour" width="84"></div><div class="cap"><b>Icon, full colour</b><span>App, favicon, avatar</span><span class="dl"><a href="logos/vps-logo-icon.svg" download>SVG</a><a href="logos/vps-logo-icon.png" download>PNG</a></span></div></div>
+    <div class="tile"><div class="stage onnavy"><img src="logos/vps-logo-icon-reversed.svg" alt="Icon, reversed" width="84"></div><div class="cap"><b>Icon, reversed</b><span>Icon on dark</span><span class="dl"><a href="logos/vps-logo-icon-reversed.svg" download>SVG</a><a href="logos/vps-logo-icon-reversed.png" download>PNG</a></span></div></div>
+    <div class="tile"><div class="stage onwhite"><img src="logos/vps-logo-icon-mono.svg" alt="Icon, monochrome" width="84"></div><div class="cap"><b>Icon, monochrome</b><span>Engraving, one-colour merch</span><span class="dl"><a href="logos/vps-logo-icon-mono.svg" download>SVG</a><a href="logos/vps-logo-icon-mono.png" download>PNG</a></span></div></div>
 
   </div>
 </section>
@@ -180,7 +183,6 @@ h1,h2,h3,p{margin:0;text-wrap:balance}
     <div class="sw"><div class="chip" style="background:#FFFFFF;color:#1E2238"><span>White</span><small>Background</small></div><dl><dt>HEX</dt><dd>#FFFFFF</dd><dt>RGB</dt><dd>255 255 255</dd></dl><button class="copy" data-copy="#FFFFFF" type="button">Copy #FFFFFF</button></div>
 
   </div>
-  <p class="note"><b>Missing:</b> CMYK and Pantone for print.</p>
 </section>
 
 <section class="sec" id="gradient">
@@ -213,7 +215,6 @@ h1,h2,h3,p{margin:0;text-wrap:balance}
         <div><span style="font-family:var(--font-ar);font-weight:400;font-size:15px">نص عادي يُقرأ بهذا الحجم والوزن.</span><small>Cairo Regular 400</small></div>
       </div></div>
   </div>
-  <p class="note"><b>To confirm:</b> concept board looks like Proxima Nova. Website uses Inter.</p>
 </section>
 
 <section class="sec" id="voice">
